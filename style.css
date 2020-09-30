@@ -1,0 +1,238 @@
+* {
+    font-family: 'Creepster', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(87, 84, 231);
+}
+
+/* services */
+.services-section {
+    background: url(joshua-reddekopp-SyYmXSDnJ54-unsplash.jpg);
+    background-size: cover;
+    padding: 205px 0;
+}
+
+.inner-width {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.section-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 7px;
+}
+
+.border {
+    width: 160px;
+    height: 2px;
+    background: whitesmoke;
+    margin: 40px auto;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-box {
+    max-width: 33.33%;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.service-icon {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 3px solid;
+    transform: rotate(45deg);
+    margin-bottom: 30px;
+    border-radius: 10px;
+    margin-top: 16px;
+}
+
+.service-box:hover .service-icon {
+    background: #82ccdd;
+    color: #ddd;
+}
+
+.service-title {
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.service-title:hover {
+    color: white;
+}
+
+.service-desc {
+    font-size: 18px;
+    border: solid rgba(204, 204, 204, 0.5);
+    border-radius: 14px;
+    background-color: rgba(51, 51, 51, 0.9);
+}
+
+.service-desc:hover {
+    color: white;
+    border-color: purple;
+}
+
+body {
+    background-color: black;
+}
+
+.layout {
+    height: auto;
+    width: 100%;
+}
+
+/* navbar */
+.header {
+    height: 100px;
+    background: rgba(51, 51, 51, 0.9);
+    padding: 0 20px;
+}
+
+.logo {
+    line-height: 100px;
+    float: left;
+    text-transform: uppercase;
+    font-size: 40px;
+    letter-spacing: 4px;
+}
+
+.menu {
+    float: right;
+    line-height: 100px;
+}
+
+.menu a {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    font-size: 30px;
+    transition: 0.4s;
+}
+
+.show-menu-btn,.hide-menu-btn {
+    transition: 0.4s;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.show-menu-btn {
+    float: right;
+}
+
+.show-menu-btn img {
+    line-height: 100px;
+}
+
+.menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover {
+    color: #82ccdd;
+}
+
+#chk {
+    position: absolute;
+    visibility: hidden;
+    z-index: -1111;
+}
+
+/* Grid */
+.container {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.container .box {
+    position: relative;
+    /* background: yellow; */
+    padding: 20px 40px 40px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.container .box {
+    background: linear-gradient(45deg,#036eb7,#64eaff);
+    
+    opacity: 0.7; 
+}
+
+.container a {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+    z-index: 1;
+    color: #fff;
+    opacity: 1;
+    text-transform: uppercase;
+}
+
+.container a:hover {
+    color: purple;
+
+}
+
+.container p {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    opacity: 0.8;
+    font-size: 18px;
+}
+
+
+
+
+/* navbar media q */
+@media screen and (max-width:800px) {
+    .show-menu-btn,.hide-menu-btn{
+        display: block;
+    }
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #333;
+        right: -100%;
+        left: 0;
+        top: 0;
+        text-align: center;
+        padding: 80px 0;
+        line-height: normal;
+        transition: 0.7s;
+    }
+    .menu a {
+        display: block;
+        padding: 20px;
+    }
+    .hide-menu-btn{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #chk:checked ~ .menu {
+        right: 0;
+    }
+}
